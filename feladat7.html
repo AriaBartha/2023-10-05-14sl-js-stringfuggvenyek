@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Stringfüggvények</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+        function init() {
+            const szoveg_input = document.getElementById("szoveg");
+            const szamol = document.getElementById("szamol");
+            const kimenet = document.getElementById("kimenet");
+
+            szamol.addEventListener("click", () => {
+                const szoveg = szoveg_input.value;
+                let szokozok_szama = 0;
+                for (let i = 0; i < szoveg.length; i++) {
+                    const karakter = szoveg[i];
+                    if (karakter == " ") {
+                        szokozok_szam++;
+                    }
+                }
+                kimenet.innerHTML = "Szóközök száma: " + szokozok_szama;
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <textarea id="szoveg" placeholder="Adjon meg egy szöveget."></textarea>
+    <br>
+    <button id="szamol">Szóközök megszámlálása</button>
+    <p id="kimenet"></p>
+</body>
+
+</html>
