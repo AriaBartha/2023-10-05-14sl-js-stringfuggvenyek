@@ -5,6 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS - String függvények</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+        function init() {
+
+            const karaterek = [];
+            for (let i = 0; i < 255; i++) {
+                let kod = String.fromCharCode(i);
+                karaterek.push(kod);
+            };
+            var text = karaterek.map(function (item, index) {
+                var item_number = index + 1;
+                return item_number + ". " + item;
+            }).join(" ");
+            kimenet.innerHTML = text;
+
+        }
+
+    </script>
 </head>
 
 <body>
