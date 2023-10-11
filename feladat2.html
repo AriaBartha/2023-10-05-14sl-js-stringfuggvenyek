@@ -4,7 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS - String függvények</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+        function init() {
+            const nevekGomb = document.getElementById('nevek');
+            nevekGomb.addEventListener("click", () => {
+                const csaladiNev = document.getElementById("csNev").value;
+                const utoNev = document.getElementById("uNev").value;
+                alert(csaladiNev + " " + utoNev);
+
+
+            });
+        }
+
+    </script>
 
 </head>
 
