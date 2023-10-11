@@ -15,7 +15,7 @@
                 const kisbetus = document.getElementById("kisbetus").checked;
                 const nagybetus = document.getElementById("nagybetus").checked;
                 if (kisbetus) {
-                    kimenet.innerHTML = kisbetusse(szoveg);
+                    kimenet.innerHTML = szoveg.toLowerCase();
                 } else if (nagybetus) {
                     kimenet.innerHTML = szoveg.toUpperCase();
                 }
@@ -25,7 +25,7 @@
 
         }
 
-        const kisbetusse = szoveg => szoveg.toLowercase();
+
 
     </script>
 </head>
