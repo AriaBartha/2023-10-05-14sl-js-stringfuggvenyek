@@ -5,6 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS - String függvények</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", initialize);
+
+        function initialize() {
+            const titkositGomb = document.getElementById('titkosit');
+            titkositGomb.addEventListener("click", () => {
+                const szoveg = document.getElementById("szoveg").value;
+
+                function titkosit(sz) {
+                    let tomb = [];
+                    for (let i = 0; i < sz.length; i++) {
+                        let kod = sz.charCodeAt(i);
+                        tomb.push(kod);
+                    } return tomb;
+                }
+                kimenet.innerHTML = titkosit(szoveg);
+            });
+
+        }
+
+    </script>
 </head>
 
 <body>
