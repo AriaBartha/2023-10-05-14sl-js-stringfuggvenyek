@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS - String függvények</title>
     <script>
+        document.addEventListener("DOMContentLoaded", init);
+        function init() {
 
+            const szoveghossz_gomb = document.getElementById('szoveghossz');
+            szoveghossz_gomb.addEventListener("click", () => {
+                const szoveg = document.getElementById("szoveg").value;
+                kimenet.innerHTML = "A szöveg hossza: " + szoveg.length;
+            })
+        }
 
 
 
@@ -16,7 +24,7 @@
 <body>
     <div>
         <input type="text" placeholder="Adjon meg egy szöveget" id="szoveg">
-        <button id="atalakit">A szöveg hossza</button>
+        <button id="szoveghossz">A szöveg hossza</button>
         <p id="kimenet"></p>
     </div>
 </body>
