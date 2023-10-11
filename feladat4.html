@@ -5,6 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS - String függvények</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", initialize);
+
+        function initialize() {
+            const atalakit_gomb = document.getElementById('atalakit');
+            atalakit_gomb.addEventListener("click", () => {
+                const szoveg = document.getElementById("szoveg").value;
+                const kisbetus = document.getElementById("kisbetus").checked;
+                const nagybetus = document.getElementById("nagybetus").checked;
+                if (kisbetus) {
+                    kimenet.innerHTML = kisbetusse(szoveg);
+                } else if (nagybetus) {
+                    kimenet.innerHTML = szoveg.toUpperCase();
+                }
+
+
+            });
+
+        }
+
+        const kisbetusse = szoveg => szoveg.toLowercase();
+
+    </script>
 </head>
 
 <body>
