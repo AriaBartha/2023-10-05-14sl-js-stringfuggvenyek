@@ -5,6 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS - String függvények</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", initialize);
+
+        function initialize() {
+            const atalakitGomb = document.getElementById('atalakit');
+            atalakitGomb.addEventListener("click", () => {
+                const szoveg = document.getElementById("szoveg").value;
+
+                kimenet.innerHTML = szoveg.toLowerCase();
+            });
+
+        }
+    </script>
 </head>
 
 <body>
