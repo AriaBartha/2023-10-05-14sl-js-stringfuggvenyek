@@ -6,7 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS - String függvények</title>
     <script>
-
+        document.addEventListener("DOMContentLoaded", init);
+        function init() {
+            const keresGomb = document.getElementById('keres');
+            keresGomb.addEventListener("click", () => {
+                const szoveg = document.getElementById("szoveg").value;
+                const szo = document.getElementById("szo").value;
+                var benneVan = szoveg.includes(szo);
+                if (benneVan == true) {
+                    alert("Szerepel az adott szó a keresett szövegben!");
+                } else {
+                    alert("Nem szerepel az adott szó a keresett szövegben!")
+                }
+            });
+        }
     </script>
 </head>
 
